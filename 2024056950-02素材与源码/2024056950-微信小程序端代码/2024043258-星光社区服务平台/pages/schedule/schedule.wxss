@@ -1,0 +1,132 @@
+.VerticalNav.nav {
+  width: 57%;
+  white-space: initial;
+}
+
+.VerticalNav.nav .cu-item {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  border: none;
+  height: 50px;
+  position: relative;
+}
+
+.VerticalNav.nav .cu-item.cur {
+  background-color: #f1f1f1;
+}
+.VerticalNav.nav .cu-item.cur::after {
+  content: "";
+  width: 8rpx;
+  height: 30rpx;
+  border-radius: 10rpx 0 0 10rpx;
+  position: absolute;
+  background-color: currentColor;
+  top: 0;
+  right: 0rpx;
+  bottom: 0;
+  margin: auto;
+}
+.VerticalBox{
+  display: flex;
+}
+.VerticalMain{
+  background-color: #f1f1f1;
+}
+
+.cu-list.menu-avatar>.cu-item .content {
+  position: absolute;
+  left: 30rpx;
+  width: calc(100% - 96rpx);
+  line-height: 1.6em;
+}
+
+
+.cu-btn {
+  position: relative;
+  border: 0rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  height: 64rpx;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0rpx, 0rpx);
+  margin-right: initial;
+  max-width: 80px;
+}
+.cu-list.menu-avatar>.cu-item {
+    position: relative;
+    display: flex;
+    padding-right: 10rpx;
+    height: 100rpx;
+    background-color: var(--white);
+    justify-content: flex-end;
+    align-items: center;
+}
+.cu-form-group .title {
+  min-width: calc(8em + 30rpx);
+}
+
+.cu-btn {
+  position: relative;
+  border: 13rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  height: 64rpx;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0rpx, 0rpx);
+  margin-right: initial;
+  max-width: 147px;
+}
+
+.margin-tb-sm {
+  margin-top: 85rpx;
+  margin-bottom: 20rpx;
+}
+/* 活动类型选择器样式 */
+.activity-type {
+  margin-top: 50rpx;
+  margin-bottom: 20rpx; /* 调整与其他元素的间距 */
+}
+
+/* picker组件样式 */
+.picker {
+  font-size: 28rpx; /* 设置字体大小 */
+  color: #333; /* 设置文字颜色 */
+  line-height: 60rpx; /* 设置行高 */
+  padding: 0 20rpx; /* 设置内边距 */
+  border: 1rpx solid #999; /* 设置边框 */
+  border-radius: 4rpx; /* 设置边框圆角 */
+  background-color: #fff; /* 设置背景色 */
+}
+
+/* picker组件点击后的样式 */
+.picker::after {
+  content: '▼'; /* 添加下箭头符号 */
+  position: absolute; /* 绝对定位 */
+  top: 50%; /* 垂直居中 */
+  right: 50rpx; /* 距右边20rpx */
+  transform: translateY(-50%); /* 上下居中 */
+  color: #999; /* 设置颜色 */
+}
+
+.tip-text {
+  font-size: 12px;
+  color: #666;
+}

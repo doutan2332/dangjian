@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<!-- 显示获取的用户信息 -->
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <view bindtap="bindViewTap">
+      <image src="../../icons/logo.png" class="myimg"></image>
+    </view>
+    <text class="title">星光社区服务平台</text>
+    <view class="position" wx:if="{{position != null}}">
+      <text class="cuIcon-locationfill text-grey">{{position}}</text>
+    </view>
+  </view>
+
+  <view class="usermotto" wx:if="{{position == null}}">
+    <button class="user-motto" bindtap="chooseAddress">社区选择</button>
+  </view>
+
+  <view class="usermotto" wx:if="{{position != null}}">
+    <button class="user-motto" bindtap="login">登录</button>
+  </view>
+</view>
+
+<!-- 社区选择  -->
+<scroll-view scroll-y class='body'>
+  <RegionPicker id='getAddress' bind:resultEvent="resultEvent" bind:closeEvent="closeEvent">
+  </RegionPicker>
+</scroll-view>
+<!-- 社区选择  -->

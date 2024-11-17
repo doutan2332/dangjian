@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "apifm-wxapi": "^3.68.1",
+    "request-promise": "^4.2.6",
+    "wx-server-sdk": "^3.0.1"
+  }
+}

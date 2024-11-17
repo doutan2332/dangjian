@@ -1,0 +1,126 @@
+#login {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  width: 600px;
+  min-height: 700px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .top {
+    padding: 20px 50px 20px 50px;
+    .title {
+      margin-bottom: 20px;
+      text-align: center;
+      a {
+        color: #808595;
+        font-size: 27px;
+      }
+      a.active {
+        color: #749F8AFF;
+      }
+    }
+    //h2 {
+    //  display: flex;
+    //  justify-content: center;
+    //  margin-bottom: 20px;
+    //}
+    .login_form {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      input {
+        margin-bottom: 20px;
+        border: 1px solid #f0eeee;
+        outline: none;
+        height: 40px;
+        border-radius: 5px;
+        padding-left: 20px;
+        transition: all 0.3s;
+        &:focus {
+          border: 2px solid #749F8AFF;
+        }
+      }
+      .code {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        input {
+          width: 53%;
+        }
+        img {
+          height: 42px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+      button {
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background-color: #749F8AFF;
+        color: white;
+        cursor: pointer;
+      }
+    }
+    .login_other {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      >p {
+        font-size: 14px;
+        color: #808595;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 160px;
+        height: 1px;
+        background-color: #808595;
+        left: 0;
+        top: 8px;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 160px;
+        height: 1px;
+        background-color: #808595;
+        right: 0;
+        top: 8px;
+      }
+      >div {
+        margin-top: 20px;
+        img {
+          width: 40px;
+          margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 270px;
+    }
+  }
+}
+

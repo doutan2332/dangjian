@@ -1,0 +1,28 @@
+<!--pages/appointment/search/search.wxml-->
+<view class="cu-bar bg-white search" style="top:2px;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入党员姓名" confirm-type="search" value="{{inputVal}}" bindinput="inputTyping"></input>
+  </view>
+  <view class="action" style="width: 15%;">
+    <button class="cu-btn bg-gradual-green shadow-blur round" bindtap="inputTyping">搜索</button>
+  </view>
+</view>
+
+<!-- 显示党员 -->
+<view class="cu-list menu-avatar fixed">
+  <view class="cu-item solid-bottom" wx:for="{{communistList}}">
+    <view class="cu-avatar round lg" style="background-image:url({{item.faceImg}});" bindtap="toAvaiable" data-index="{{index}}"></view>
+    <view class="content" bindtap="toAvaiable" data-index="{{index}}">
+      <view class="text-blue">{{item.realName}}</view>
+      <view class="text-black text-sm flex">
+        <text>
+          <text></text> 职业：{{item.occupation}}
+        </text>
+      </view>
+    </view>
+    <view class="action" bindtap="toAvaiable" data-index="{{index}}">
+      <button class="cu-btn bg-blue" style="position: absolute; right: 5px; top: 15px; width: 85px;">查看空闲</button>
+    </view>
+  </view>
+</view>

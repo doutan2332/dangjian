@@ -1,0 +1,35 @@
+<!--pages/message/message.wxml-->
+<view class="cu-list menu-avatar">
+  <block wx:for="{{myMessages}}" wx:key="{{index}}">
+    <view class="cu-item solid-bottom" wx:if="{{item.userA_id == myid}}">
+      <view class="cu-avatar round lg" style="background-image:url({{item.userB_faceImg}});" bindtap="toChat" data-index="{{index}}"></view>
+      <view class="content">
+        <view class="text-black">
+          <text class="text-cut" style="font-size: 36rpx;">{{item.userB_nickName}}</text>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut" style="font-size: xx-small;">{{item.record[item.record.length - 1].text}}</text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs" style="font-size: xx-small;">{{item.record[item.record.length - 1].time}}</view>
+        <view class="sm"></view>
+      </view>
+    </view>
+    <view class="cu-item solid-bottom" wx:else="{{item.userB_id == myid}}" bindtap="toChat" data-index="{{index}}">
+      <view class="cu-avatar round lg" style="background-image:url({{item.userA_faceImg}});"></view>
+      <view class="content">
+        <view class="text-black">
+          <text class="text-cut" style="font-size: 36rpx;">{{item.userA_nickName}}</text>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut" style="font-size: 29rpx;">{{item.record[item.record.length - 1].text}}</text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs" style="font-size: 30rpx;">{{item.record[item.record.length - 1].time}}</view>
+        <view class="sm"></view>
+      </view>
+    </view>
+  </block>
+</view>

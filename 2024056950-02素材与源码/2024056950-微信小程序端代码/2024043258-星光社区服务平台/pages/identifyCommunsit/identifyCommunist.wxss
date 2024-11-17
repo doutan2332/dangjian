@@ -1,0 +1,98 @@
+/* pages/identifyCommunsit/identifyCommunist.wxss */
+.cont {
+  font-family: "微软雅黑";
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* 实名认证 */
+.shiming {
+  font-size: 32rpx;
+  padding: 20rpx 40rpx;
+  color: #000;
+}
+/* 标签 */
+.label {
+  font-family: "微软雅黑", "黑体";
+  height: 54rpx;
+  width: 579rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  padding: 10rpx;
+  margin-top: 38rpx;
+  padding-left: 30rpx;
+}
+
+.label:before {
+  content: "*";
+  color: red
+}
+/* 输入框 */
+.in {
+  float: right;
+  width: 70%;
+  padding: 0rpx 10rpx;
+  font-size: 28rpx;
+  color: #000;
+  box-shadow: 0 0 1px #000;
+}
+.placeholder {
+  color: #ccc;
+  font-size: 26rpx;
+}
+
+/* 党员证明 */
+.shenfen {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20rpx 40rpx;
+  background: #fff;
+  margin-top: 340rpx;
+}
+.shenfen2{
+  width: 100%;
+  margin: 0 auto;
+  padding: 20rpx 40rpx;
+  background: #fff;
+  margin-top: 34rpx;
+}
+
+.shenfen1 {
+  width: 80%;
+  padding-bottom: 10rpx;
+  font-size: 32rpx;
+}
+
+/* 提交按钮 */
+.su {
+  width: 84%;
+  color: #fff;
+  font-size: 30rpx;
+  font-family: "微软雅黑", "黑体";
+  top: 103rpx;
+  background: #d9002f;
+  margin-bottom: 100rpx;
+}
+
+.edit-img {
+  display: block;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.icon-plus {
+  width: 139rpx;
+  height: 139rpx;
+  margin-top: 1rem;
+  margin-left: 34%;
+  margin-right: 30%;
+  background-color: rgba(87,107,149,0.1);
+  font-size: 40pt;
+  color: #888;
+  line-height: 125rpx;
+  text-align: center;
+}

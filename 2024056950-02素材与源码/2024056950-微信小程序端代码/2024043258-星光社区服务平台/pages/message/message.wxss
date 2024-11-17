@@ -1,0 +1,11 @@
+/* pages/message/message.wxss */
+.cu-list.menu-avatar>.cu-item .action {
+  width: 25%;
+  text-align: center;
+}
+.cu-list.menu-avatar>.cu-item .content {
+  position: absolute;
+  left: 146rpx;
+  width: 75%;
+  line-height: 1.6em;
+}

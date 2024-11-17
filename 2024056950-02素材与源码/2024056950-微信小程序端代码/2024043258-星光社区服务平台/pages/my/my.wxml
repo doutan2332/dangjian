@@ -1,0 +1,70 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="divLine" wx:if="{{!hiddenBtn}}">
+    <button class="cu-btn bg-blue shadow" style="width: fit-content; margin-left: 3px;" bindtap="identify" wx:if="{{communistStatus == 0 || communistStatus == 2}}">
+      <text class="cuIcon-card"></text>党员认证
+    </button>
+    <button class="cu-btn bg-blue shadow" style="width: fit-content; margin-left: 3px;" wx:if="{{communistStatus == -1}}">
+      <text class="cuIcon-card"></text>等待审核
+    </button>
+    <button class="cu-btn bg-blue shadow" style="width: fit-content; margin-left: 3px;" wx:if="{{communistStatus == 1}}">
+      <text class="cuIcon-card"></text>我是党员
+    </button>
+  </view>
+  <view class="userinfo">
+    <block>
+      <image class="userinfo-avatar" src="{{userInfo.faceImg}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <view class="position" wx:if="{{position != null}}">
+      <text class="cuIcon-locationfill text-grey" bindtap="chooseAddress">{{position}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu margin-top-s margin-bottom-xl shadow-lg radius">
+  <view class="cu-item arrow" wx:if="{{communistStatus != 1}}">
+    <navigator class="content" url="/pages/my/myBooking/myBooking" hover-class="none">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">我的预约</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow" wx:if="{{communistStatus != 1}}">
+    <navigator class="content" url="/pages/partyAvaluate/partyAvaluate" hover-class="none">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">党员评价</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow" wx:if="{{communistStatus == 1}}">
+    <navigator class="content" url="/pages/my/myAgenda/myAgenda" hover-class="none">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">我的日程</text>
+    </navigator>
+  </view>
+
+  <view class="cu-item arrow" bindtap="chooseAddress">
+    <navigator class="content" url="" hover-class="none">
+      <text class="cuIcon-locationfill text-blue"></text>
+      <text class="text-grey">所属社区</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow" wx:if="{{communistStatus == 1}}">
+    <navigator class="content" url="/pages/schedule/schedule" hover-class="none">
+      <text class="cuIcon-formfill text-green"></text>
+      <text class="text-grey">日程登记</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <button class="cu-btn content" open-type="feedback">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">意见反馈</text>
+    </button>
+  </view>
+</view>
+
+<!-- 社区选择  -->
+<scroll-view scroll-y class='body'>
+  <RegionPicker id='getAddress' bind:resultEvent="resultEvent" bind:closeEvent="closeEvent">
+  </RegionPicker>
+</scroll-view>
+<!-- 社区选择  -->

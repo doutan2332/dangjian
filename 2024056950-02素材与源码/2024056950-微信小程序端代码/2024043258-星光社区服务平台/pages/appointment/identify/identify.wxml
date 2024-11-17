@@ -1,0 +1,50 @@
+<!--pages/appointment/identify/identify.wxml-->
+<!-- <view>社区:{{address}}</view>
+<view>党员:{{name}}</view>
+<view>职业:{{occupation}}</view>
+<view>日期:{{date}}</view>
+<view>时间:{{time}}</view> -->
+
+<!-- 1.社区 -->
+<view class="flex align-center" style="border-bottom: 5rpx solid #c0c0c0;">
+  <view class="padding" style="font-size: 13px;">社区</view>
+  <view class="solid-bottom text-lg padding">
+    <text class="text-black" style="font-weight: 550;">{{address}}</text>
+  </view>
+</view>
+
+<!-- 2.党员 -->
+<view class="flex align-center" style="border-bottom: 5rpx solid #c0c0c0;">
+  <view class="padding" style="font-size: 13px;">党员</view>
+  <view class="solid-bottom text-lg padding">
+    <text class="text-black" style="font-weight: 550;">{{name}}</text>
+  </view>
+</view>
+
+<!-- 3.职业 -->
+<view class="flex align-center" style="border-bottom: 5rpx solid #c0c0c0;">
+  <view class="padding" style="font-size: 13px;">职业</view>
+  <view class="solid-bottom text-lg padding">
+    <text class="text-black" style="font-weight: 550;">{{occupation}}</text>
+  </view>
+</view>
+
+<!-- 4.日期 -->
+<view class="flex align-center" style="border-bottom: 5rpx solid #c0c0c0;">
+  <view class="padding" style="font-size: 13px;">日期</view>
+  <view class="solid-bottom text-lg padding">
+    <text class="text-black" style="font-weight: 550;">{{date}}</text>
+  </view>
+</view>
+
+<!-- 5.时间 -->
+<view class="flex align-center" style="border-bottom: 5rpx solid #c0c0c0;">
+  <view class="padding" style="font-size: 13px;">时间</view>
+  <view class="solid-bottom text-lg padding">
+    <text class="text-black" style="font-weight: 550;">{{time}}</text>
+  </view>
+</view>
+
+<view class="cu-bar foot">
+  <button class="cu-btn bg-blue shadow" style="position: absolute; right: 0; height: 100%; width: 80px; font-size: 12px;" bindtap="confirm">立即预约</button>
+</view>

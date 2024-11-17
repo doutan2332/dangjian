@@ -1,0 +1,22 @@
+<!--pages/appointment/detail/detail.wxml-->
+<view class="cu-list menu-avatar">
+    <view class="cu-item solid-bottom" wx:for="{{communistList}}">
+      <view class="cu-avatar round lg" style="background-image:url({{item.faceImg}});" bindtap="toHomepage" data-index="{{index}}"></view>
+      <view class="content" bindtap="toHomepage" data-index="{{index}}">
+        <view class="text-blue">{{item.realName}}</view>
+        <view class="text-black text-sm flex">
+          <text>
+						<text></text> 职业：{{item.occupation}}
+          </text>
+        </view>
+        <view class="text-black text-sm flex">
+          <text>
+						<text></text> 简介：{{item.introduce}}
+          </text>
+        </view>
+      </view>
+      <view class="action" style="margin-right: 16px" wx:if="{{item._openid != myopenid}}">
+        <button class="cu-btn bg-blue shadow" data-target="{{item.time}}" style="width: 60px; font-size: 12px;" bindtap="toAvaiable" data-index="{{index}}">预约</button>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,14 @@
+/* pages/chat/chat.wxss */
+page{
+  padding-bottom: 100rpx;
+}
+.cu-bar.input input {
+  overflow: initial;
+  line-height: 27px;
+  height: 64rpx;
+  min-height: 64rpx;
+  flex: 1;
+  font-size: 30rpx;
+  margin: 0 20rpx;
+  min-width: 204px;
+}

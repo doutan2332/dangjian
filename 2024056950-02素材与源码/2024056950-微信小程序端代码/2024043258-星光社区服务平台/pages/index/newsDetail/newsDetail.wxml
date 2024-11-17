@@ -1,0 +1,4 @@
+<!--pages/index/newsDetail/newsDetail.wxml-->
+<view class="title">{{newsInfo.title}}</view>
+<view class="time">{{date}}</view>
+<text class="content" style="white-space: pre-wrap;" decode="{{true}}" space="{{true}}">        {{newsInfo.content}}</text>

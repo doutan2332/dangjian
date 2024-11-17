@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjj.mapper.EvaluationMapper">
+    <select id="getEvaluationListByAddress" parameterType="java.lang.String" resultType="com.zjj.entity.Evaluation">
+        SELECT e.* FROM evaluation e
+        LEFT JOIN person p ON e.communist_id = p.openid
+        <where>
+            <if test="address != null and address != ''">
+                p.address = #{address}
+            </if>
+        </where>
+    </select>
+</mapper>

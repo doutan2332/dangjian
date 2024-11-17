@@ -1,0 +1,70 @@
+<!--pages/identifyCommunsit/identifyCommunist.wxml-->
+<view class="cont">
+  <view class="shiming">实名认证
+    <text style="font-size: 22rpx;">(请上传真实的个人信息, 认证通过后将无法修改)</text>
+  </view>
+  <form bindsubmit="reg">
+    <!-- 姓名 -->
+    <view class="label">姓名
+      <input type="text" placeholder-class="placeholder" placeholder="请输入真实姓名" class="in" name="linkman" value="{{linkman}}" />
+    </view>
+
+    <!-- 联系电话 -->
+    <view class="label">联系电话
+      <input type="text" placeholder-class="placeholder" placeholder="请输入联系电话" class="in" name="tel" value="{{tel}}" />
+    </view>
+    <view style="text-align:right;font-size:24rpx;margin-right:60rpx;margin-top:20rpx;color:#999999;">请填写正确的有效电话，工作人员将会电话联系你</view>
+
+    <!-- 职业 -->
+    <view class="label">职业
+      <input type="text" placeholder-class="placeholder" placeholder="请输入职业" class="in" name="occupation" value="{{occupation}}" />
+    </view>
+
+    <!-- 介绍 -->
+    <view class="label">介绍
+      <textarea type="text" placeholder-class="placeholder" placeholder="请输入介绍" class="in" name="introduction" value="{{introduction}}"></textarea>
+    </view>
+
+    <!-- 上传1寸照片 -->
+    <view class="shenfen">
+      <view class="shenfen1">证件照</view>
+      <!-- 添加上传图片的相关代码 -->
+      <view class='edit-img' bindtap="hidePlus">
+        <view class='iconfont icon-plus' hidden="{{hiddenName}}">+</view>
+        <image src="{{imgSrc}}" hidden="{{!hiddenName}}" mode='aspectFit' style="width: 133px;height: 100px;"></image>
+      </view>
+    </view>
+
+    <!-- 党员证明 -->
+    <view class="shenfen2">
+      <view style="display: flex;">
+        <view class="action shenfen1">党员证明</view>
+        <view class="action" style="margin-left: 20px;">
+          {{imgList.length}}/4
+        </view>
+      </view>
+      <text style="font-size:26rpx;color:#d9002f;">*请使用手机横向拍摄以保证图片正常显示</text>
+      <!-- 添加上传图片的相关代码 -->
+      <view class="cu-form-group" style="margin-top: 25rpx;">
+        <view class="grid col-4 grid-square flex-sub">
+          <!-- 显示上传的图片照片 -->
+          <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+            <image src='{{imgList[index]}}' mode='aspectFill'></image>
+            <!-- 删除图片 -->
+            <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+              <text class="cuIcon-close"></text>
+            </view>
+          </view>
+          <!-- 上传图片 -->
+          <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+            <text class="cuIcon-cameraadd"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view style="padding-top:30rpx;font-size:30rpx;text-align:center;color:#cccccc"> 请确认以上信息准确无误 </view>
+    <!-- 提交表单信息 -->
+    <button form-type="submit" hover-class='button-hover' class='su' bindsubmit="clickBtn">保存</button>
+  </form>
+</view>

@@ -1,0 +1,70 @@
+<!--components/region-picker/region-picker.wxml-->
+<view class="mask-layer" hidden="{{isShowToast}}"></view>
+<view class="goodsdetail" hidden="{{isShowToast}}">
+  <view class="seclection-title">请选择所在地区</view>
+  <image class="close" src="../../icons/close.png" bindtap="hideGoodsDetail"></image>
+  <view class="state">
+    <view>中国大陆</view>
+    <view class="state-active"></view>
+  </view>
+  <view class='goodsdetail-top'>
+    <view wx:for="{{nameArr}}" wx:key="item">
+      <text space="ensp">{{item}}   </text>
+    </view>
+  </view>
+  <swiper class="swiper-box">
+    <swiper-item wx:if='{{currentTab == 0}}' catchtouchmove='catchTouchMove'>
+      <scroll-view scroll-y class="swiper-box-scr">
+        <view class='swiper-box-item {{nameArr[0] == item.name ? "active":""}}' wx:for='{{provinces}}' wx:key='item' data-item='{{item}}' data-index='{{index}}' bindtap='provinceChange' data-province="{{item.name}}">
+          <block wx:if="{{nameArr[0] == item.name}}">
+            <image class="select" src="{{nameArr[0] == item.name? '../../icons/icon-select.png': ''}}"></image>
+          </block>
+          <view>{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item wx:if='{{currentTab == 1}}' catchtouchmove='catchTouchMove'>
+      <scroll-view scroll-y class="swiper-box-scr">
+        <view class='swiper-box-item {{nameArr[1] == item.name ? "active":""}}' wx:for='{{cities}}' wx:key='item' data-item='{{item}}' data-index='{{index}}' bindtap='cityChange' data-city="{{item.name}}">
+          <block wx:if="{{nameArr[1] == item.name}}">
+            <image class="select" src="{{nameArr[1] == item.name? '../../icons/icon-select.png': ''}}"></image>
+          </block>
+          <view>{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item wx:if='{{currentTab == 2}}' catchtouchmove='catchTouchMove'>
+      <scroll-view scroll-y class="swiper-box-scr">
+        <view class='swiper-box-item {{nameArr[2] == item.name ? "active":""}}' wx:for='{{areas}}' wx:key='item' data-item='{{item}}' data-index='{{index}}' bindtap='areaChange' data-area="{{item.name}}">
+          <block wx:if="{{nameArr[2] == item.name}}">
+            <image class="select" src="{{nameArr[2] == item.name? '../../icons/icon-select.png': ''}}"></image>
+          </block>
+          <view>{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item wx:if='{{currentTab == 3}}' catchtouchmove='catchTouchMove'>
+      <scroll-view scroll-y class="swiper-box-scr">
+        <view class='swiper-box-item {{nameArr[3] == item.name ? "active":""}}' wx:for='{{streets}}' wx:key='item' data-item='{{item}}' data-index='{{index}}' bindtap='streetChange' data-street="{{item.name}}">
+          <block wx:if="{{nameArr[3] == item.name}}">
+            <image class="select" src="{{nameArr[3] == item.name? '../../icons/icon-select.png': ''}}"></image>
+          </block>
+          <view>{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item wx:if='{{currentTab == 4}}' catchtouchmove='catchTouchMove'>
+      <scroll-view scroll-y class="swiper-box-scr">
+        <view class='swiper-box-item {{nameArr[4] == item.name ? "active":""}}' wx:for='{{communities}}' wx:key='item' data-item='{{item}}' data-index='{{index}}' bindtap='communityChange' data-community="{{item.name}}">
+          <block wx:if="{{nameArr[4] == item.name}}">
+            <image class="select" src="{{nameArr[4] == item.name? '../../icons/icon-select.png': ''}}"></image>
+          </block>
+          <view>{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

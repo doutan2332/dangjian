@@ -1,0 +1,72 @@
+<!--pages/appointment/schedule/schedule.wxml-->
+<view class="flex  p-xs margin-bottom-sm mb-sm">
+  <view class="flex-sub bg-white padding-sm margin-xs radius" style="display: flex; justify-content: center; align-items: center;">
+    <view style="min-width: 84px;min-height: 84px;position: relative;">
+      <!-- <image src="{{avatar}}" class="cu-avatar round" style="width: 100%; height: 100%; position: absolute;"></image> -->
+      <image src="{{communistPic}}" class="cu-avatar round" style="width: 100%; height: 100%; position: absolute;"></image>
+
+    </view>
+  </view>
+  <view class="flex-twice bg-white margin-xs radius">
+    <view class="flex-twice cu-bar bg-white">
+      <view class="action sub-title">
+        <text class="text-xl text-bold text-green">{{name}}</text>
+        <text class="bg-green" style="width:2rem"></text>
+        <!-- last-child选择器-->
+      </view>
+      <view class="occupy" style="margin-right: 87px;">{{occupation}}</view>
+    </view>
+    <!-- 个人简介 -->
+    <view class="text-content margin-xs">
+      <text class="left-type">个人简介</text>
+      <text class="right-type">{{introduce}}</text>
+    </view>
+  </view>
+</view>
+<!-- 党员评价 -->
+<view class="marquee_container " style="background:{{broadcast_arr.back_color}};font-size:32rpx;" wx:if="{{commentList.length != 0}}">
+  <view class='marquee_text' style='--marqueeWidth--:{{-broadcast_arr.width_mal}}px;--speed--:{{broadcast_arr.time}}s;width:{{broadcast_arr.width_mal}}px;'>
+    <block wx:for="{{commentList}}">
+      <view style='color:{{broadcast_arr.text_color}};margin-left:{{index!=0?item.starspos*2:0}}rpx;' class="">
+        {{item.content}}
+      </view>
+    </block>
+  </view>
+</view>
+<!--  排班   -->
+<!-- 日期滚轮 -->
+<view class="choose-time-middle" style="margin-bottom: 0px;">
+  <view class="date">
+    <view wx:for="{{dateArray}}" wx:key="index">
+      <button class="{{item.day == thisDate ? 'active' : ''}}" data-id="{{item.day}}" bindtap="dateClick" data-time="{{item.time}}">
+        <view style="width: 100%; height: 15px;">{{item.week}}</view>
+        <view style="width: 100%; height: 30px;">{{item.time}}</view>
+      </button>
+    </view>
+    <!-- <text class="clearfix"></text> -->
+  </view>
+</view>
+
+<!-- 显示空闲的时间段 -->
+<block wx:if="{{curleisure.length > 0}}">
+  <view class="cu-bar bg-white shadow-warp" wx:for="{{curleisure}}" wx:key="{{index}}">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text> {{item.time}}
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-blue shadow" data-target="{{item.time}}" style="width: 60px; font-size: 12px;" bindtap="toReserve" wx:if="{{item.status == 1}}">预约</button>
+      <button class="cu-btn bg-grey shadow" style="width: 60px;" wx:if="{{item.status == 0}}">约满</button>
+    </view>
+  </view>
+</block>
+<block wx:else="">
+  <view class="UCenter-bg">
+    <image src="../../../icons/none.png" class="png"></image>
+    <view class="margin-top-sm">
+      <text>暂无空闲</text>
+    </view>
+  </view>
+  <!-- <view class="show-date text-grey text-l" style="font-weight: 500;">
+    
+  </view> -->
+</block>

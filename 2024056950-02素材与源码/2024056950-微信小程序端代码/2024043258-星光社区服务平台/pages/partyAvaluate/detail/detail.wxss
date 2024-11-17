@@ -1,0 +1,27 @@
+@import '../../../lib/iconfont/iconfont.wxss';
+
+.edit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
+    height: 30pt;
+    font-size: 11pt;
+}
+
+.edit-main {
+    padding: 0rpx 55rpx;
+    padding-bottom: 13px;
+}
+.edit-text {
+    /* min-height: 100rpx; */
+    height: 180rpx;
+    overflow-y: scroll;
+    font-size: 10pt;
+    line-height: 20pt;
+    color: #353535
+}
+
+.header-delive{
+  color: rgb(61, 137, 224);
+}

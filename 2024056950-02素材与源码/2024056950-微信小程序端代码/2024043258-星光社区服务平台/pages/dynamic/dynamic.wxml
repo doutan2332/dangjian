@@ -1,0 +1,54 @@
+<!--pages/dynamic/dynamic.wxml-->
+<view class="mytip" wx:if="{{momentsList.length == 0}}">
+  <text class="tiptext">快来发布本社区的第一个帮扶动态吧~</text>
+</view>
+<view class="cu-card dynamic no-card solid-bottom solid-top {{index == 0 ? '' : 'margin-top'}}" wx:for="{{momentsList}}" wx:key="{{index}}">
+  <view class="cu-item shadow">
+    <!-- 用户信息 -->
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <!-- 用户头像 -->
+        <image class="cu-avatar round lg" src="{{item.faceImg}}" bindtap="toHomepage" data-index="{{index}}"></image>
+        <view class="content flex-sub">
+          <!-- 用户名 -->
+          <view>{{item.nickName}}</view>
+          <!-- 发布时间 -->
+          <view class="text-gray text-sm flex justify-between publish">
+            {{item.time}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 内容 -->
+    <view class="text-content">
+      <text class="left-type">服务类型</text>
+      <text class="right-type">: {{item.serviceType}}</text>
+    </view>
+    <view class="text-content">
+      <text class="left-type">服务时间</text>
+      <text class="right-type">: {{item.date}} {{item.serviceTime}}</text>
+    </view>
+    <view class="text-content">
+      <text class="left-type">备注</text>
+      <text class="right-type">: {{item.remarks}}</text>
+    </view>
+    <view class="text-content" wx:if="{{item.serviceLocation}}">
+      <text class="left-type">社区地址</text>
+      <text class="right-type" style="font-size: small;">: {{item.serviceLocation}}</text>
+    </view>
+
+    <!-- 图片 -->
+    <view class="grid flex-sub padding-lr col-3 grid-square solid-bottom">
+      <block wx:for="{{item.fileIDs}}" wx:for-item="itemImg" wx:key="{{index}}">
+        <view class="bg-img">
+          <image src="{{itemImg}}" data-img='{{[itemImg, item.fileIDs]}}' bindtap="previewImg" mode="aspectFill"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 发布帮扶按钮 -->
+<view bindtap='setNews'>
+   <image class="news_icon" src="../../icons/launch.png"></image>
+</view>

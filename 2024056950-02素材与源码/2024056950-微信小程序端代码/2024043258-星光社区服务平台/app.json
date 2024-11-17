@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/dynamic/dynamic",
+    "pages/message/message",
+    "pages/my/my",
+    "pages/post/post",
+    "pages/dynamic/homepage/homepage",
+    "pages/chat/chat",
+    "pages/identifyCommunsit/identifyCommunist",
+    "pages/appointment/appointment",
+    "pages/appointment/detail/detail",
+    "pages/appointment/schedule/schedule",
+    "pages/appointment/search/search",
+    "pages/notice/notice",
+    "pages/schedule/schedule",
+    "pages/index/newsDetail/newsDetail",
+    "pages/appointment/identify/identify",
+    "pages/my/myAgenda/myAgenda",
+    "pages/my/myBooking/myBooking",
+    "pages/notice/detail/detail",
+    "pages/partyAvaluate/partyAvaluate",
+    "pages/partyAvaluate/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d9002f",
+    "navigationBarTitleText": "星光社区服务平台",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom",
+    "wxpost": "/components/wxpost/index",
+    "wxcard": "/components/wxcard/index"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/index.png",
+        "selectedIconPath": "icons/index-active.png"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "text": "动态",
+        "iconPath": "icons/dynamic.png",
+        "selectedIconPath": "icons/dynamic-active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "icons/message.png",
+        "selectedIconPath": "icons/message-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+        "desc": "您的位置信息将用于信息服务"
+    }
+  }
+}

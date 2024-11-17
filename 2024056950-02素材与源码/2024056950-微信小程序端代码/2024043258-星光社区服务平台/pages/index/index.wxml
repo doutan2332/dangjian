@@ -1,0 +1,61 @@
+<!--index.wxml-->
+
+<!-- 轮播图 -->
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key>
+    <image src="{{item}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+<!-- 搜索框 -->
+<view class="cu-bar search bg-white">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+  </view>
+</view>
+<!-- 标题 -->
+<view class="title">
+  <!-- <image src="/icons/imgBg.jpg" mode="aspectFill" class="title-image">
+  </image> -->
+  <text class="title-text">在 线 办 事</text>
+</view>
+<!-- 在线办事卡片 -->
+<view class="nav-list">
+  <navigator open-type="navigate" hover-class="none" url="../appointment/appointment" class="nav-li bg-blue">
+    <view class="nav-title">预约</view>
+    <view class="nav-name">Appointment</view>
+    <text class="cuIcon-newsfill"></text>
+  </navigator>
+  <navigator open-type="navigate" hover-class="none" url="../notice/notice" class="nav-li bg-blue">
+    <view class="nav-title">公告</view>
+    <view class="nav-name">Notice</view>
+    <text class="cuIcon-newsfill"></text>
+  </navigator>
+</view>
+<!-- 新闻动态标题 -->
+<!-- 标题 -->
+<view class="title" style="margin-top: 10px;">
+  <!-- <image src="/icons/imgBg.jpg" mode="aspectFill" class="title-image">
+  </image> -->
+  <text class="title-text">新 闻 动 态</text>
+</view>
+
+<!-- 新闻分类标签 -->
+<scroll-view scroll-x class="bg-white nav scrollNews" scroll-with-animation scroll-left="{{scrollLeft}}">
+  <view class="cu-item {{index==TabCur?'text-blue cur enlarge':'default'}}" wx:for="{{newsTab}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+    {{item}}
+  </view>
+</scroll-view>
+
+<!-- 具体新闻内容 -->
+<view class="cu-list menu-avatar">
+    <view class="cu-item solid-bottom" style="min-height: 180rpx;" wx:for="{{curNewsList}}" wx:key="{{index}}">
+      <text class="cuIcon-title text-green" style="position: absolute; left: 15px; top: 17px;"></text>
+      <view class="content" data-id="{{item.id}}" bindtap="goNewsDetail">
+        <view class="text-black" style="font-size: 36rpx; margin-bottom: 2px;">{{item.title}}</view>
+        <!-- 时间 -->
+        <view class="text-grey text-xs" style="margin-top: 5px; font-size: 12px;">{{datearr[index]}}</view>
+      </view>
+    </view>
+  </view>
+

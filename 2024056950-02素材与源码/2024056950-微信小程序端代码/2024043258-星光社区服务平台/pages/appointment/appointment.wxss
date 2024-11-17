@@ -1,0 +1,105 @@
+.VerticalNav.nav {
+  width: 57%;
+  white-space: initial;
+}
+
+.VerticalNav.nav .cu-item {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  border: none;
+  height: 50px;
+  position: relative;
+}
+
+.VerticalNav.nav .cu-item.cur {
+  background-color: #f1f1f1;
+}
+.VerticalNav.nav .cu-item.cur::after {
+  content: "";
+  width: 8rpx;
+  height: 30rpx;
+  border-radius: 10rpx 0 0 10rpx;
+  position: absolute;
+  background-color: currentColor;
+  top: 0;
+  right: 0rpx;
+  bottom: 0;
+  margin: auto;
+}
+.VerticalBox{
+  display: flex;
+}
+.VerticalMain{
+  background-color: #f1f1f1;
+}
+
+.cu-list.menu-avatar>.cu-item .content {
+  position: absolute;
+  left: 30rpx;
+  width: calc(100% - 96rpx);
+  line-height: 1.6em;
+}
+
+
+.cu-btn {
+  position: relative;
+  border: 0rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  height: 64rpx;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0rpx, 0rpx);
+  margin-right: initial;
+  max-width: 80px;
+}
+.cu-list.menu-avatar>.cu-item {
+    position: relative;
+    display: flex;
+    padding-right: 10rpx;
+    height: 100rpx;
+    background-color: var(--white);
+    justify-content: flex-end;
+    align-items: center;
+}
+/* 在对应的WXSS文件中添加以下样式 */
+
+/* 自定义活动类型选择器样式 */
+.activity-type {
+  margin-top: 50rpx; /* 设置选择器与上方元素的间距 */
+}
+
+/* 自定义选择器样式 */
+.picker {
+  border: 1rpx solid #ccc; /* 设置选择器的边框样式 */
+  border-radius: 5rpx; /* 设置选择器的圆角 */
+  padding: 10rpx; /* 设置选择器的内边距 */
+  background-color: #f8f8f8; /* 设置选择器的背景颜色 */
+  color: #333; /* 设置选择器的文字颜色 */
+  font-size: 28rpx; /* 设置选择器的字体大小 */
+}
+
+/* 自定义选择器中当前选项的样式 */
+.picker::after {
+  content: ""; /* 使用伪元素添加选中项样式 */
+  position: absolute;
+  top: 50%;
+  right: 20rpx; /* 调整选中项样式的位置 */
+  margin-top: -5rpx; /* 调整选中项样式的位置 */
+  border-width: 5rpx 5rpx 0;
+  border-color: #333 transparent transparent;
+  border-style: solid;
+}
+.tip-text {
+  font-size: 14px;
+  color: #666;
+}

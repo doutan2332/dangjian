@@ -1,0 +1,40 @@
+<!--pages/chat/chat.wxml-->
+<view class="cu-chat" id="page">
+  <block wx:for="{{chatList}}">
+    <!-- 我方发送的消息 -->
+    <view class="cu-item self" wx:if="{{item.id == myInfo._openid}}">
+      <view class="main">
+        <view class="content bg-blue shadow light">
+          <!-- 1.消息内容 -->
+          <text class="text-black">{{item.text}}</text>
+        </view>
+      </view>
+      <!-- 2.头像 -->
+      <view class="cu-avatar radius" style="background-image:url({{myInfo.faceImg}});"></view>
+      <!-- 3.发送时间 -->
+      <view class="date">{{item.time}}</view>
+    </view>
+    <!-- 对方发送的消息 -->
+    <view class="cu-item" wx:if="{{item.id == userBid}}">
+      <!-- 1.头像 -->
+      <view class="cu-avatar radius" style="background-image:url({{userBInfo.faceImg}});"></view>
+      <!-- 2.消息 -->
+      <view class="main">
+        <view class="content shadow bg-brown light">
+          <text class="text-black">{{item.text}}</text>
+        </view>
+      </view>
+      <!-- 3.时间 -->
+      <view class="date">{{item.time}}</view>
+    </view>
+  </block>
+  <view class="cu-bar foot input" style="bottom:0rpx">
+  <view class="action">
+    <text class="cuIcon-sound text-grey"></text>
+  </view>
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" cursor-spacing="10" bindinput="getInputValue" value="{{inputValue}}"></input>
+  <button class="cu-btn bg-blue shadow" bindtap="sendMessage">发送</button>
+</view>
+</view>
+
+

@@ -1,0 +1,71 @@
+/* pages/dynamic/dynamic.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.news_icon {
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  bottom: 40rpx;
+  right: 20rpx;
+  border-radius: 50rpx;
+  background-color: white;
+  z-index: 999;
+}
+
+.cu-list.menu-avatar>.cu-item .content>view:first-child {
+  font-size: 37rpx;
+  display: flex;
+  align-items: center;
+  font-family: STXingkai;
+  font-weight: 100;
+}
+
+.publish {
+    font-family: STHeiti;
+  /* font-family: STFangsong; */
+  font-size: 11px;
+}
+
+.cu-avatar.lg {
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 2em;
+  margin-top: -10px;
+}
+
+.text-content {
+  line-height: 1.6;
+  margin-left: 9px;
+}
+.left-type {
+  /* font-family: STHeiti; */
+  font-family: STXingkai;
+  font-weight: 550;
+  font-size: 15px;
+}
+
+.grid.col-3.grid-square>view {
+  padding-bottom: calc((100% - 40rpx)/3);
+  height: 0;
+  width: calc((100% - 40rpx)/3);
+  margin-left: 10px;
+}
+
+.right-type {
+  /* font-family: STHeiti Light [STXihei]; */
+  font-family: KaiTi;
+  font-size: 14px;
+}
+
+.mytip {
+  margin: 5px;
+  position: relative;
+}
+.tiptext {
+  font-size: 15px;
+  position: absolute;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "RegionPicker": "../../components/region-picker/region-picker"
+  },
+  "navigationBarTitleText": "我的"
+}

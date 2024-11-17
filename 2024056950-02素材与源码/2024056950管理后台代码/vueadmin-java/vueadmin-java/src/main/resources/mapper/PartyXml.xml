@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjj.mapper.PartyMapper">
+    <insert id="saveParty" parameterType="map">
+        insert into party_leisure (id, openid, leisure) values (null, #{openid}, #{leisure})
+    </insert>
+
+    <select id="getPartyListByAddress" parameterType="java.lang.String" resultType="com.zjj.entity.Party">
+        SELECT pa.*
+        FROM party pa
+                 LEFT JOIN person pe on pa.openid = pe.openid
+        <where>
+            <if test="address != null and address != ''">
+                pe.address = #{address}
+            </if>
+        </where>
+    </select>
+
+
+</mapper>

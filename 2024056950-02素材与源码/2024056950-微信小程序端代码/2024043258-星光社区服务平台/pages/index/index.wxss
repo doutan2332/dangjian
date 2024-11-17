@@ -1,0 +1,90 @@
+.title {
+  width: 100%;
+  height: 58px;
+  position: relative;
+  background: #fff;
+}
+.title-image{
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.title-text{
+  z-index: 1000;
+  color: #808080;
+  font-size: 23px;
+  height: 24px;  
+  line-height: 24px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.scrollNews {
+  padding-left: 10px;
+}
+.enlarge {
+  font-size: 20px;
+}
+.default {
+  font-size: 15px;
+}
+.nav .cu-item.cur {
+  border-bottom: 11rpx solid;
+}
+.nav .cu-item {
+    height: 90rpx;
+    display: inline-block;
+    line-height: 91rpx;
+    margin: 0px 26rpx;
+    padding: 0 20rpx;
+}
+
+.cu-list.menu-avatar>.cu-item .content {
+  position: absolute;
+  left: 48rpx;
+  width: 88%;
+  line-height: 1.6em;
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 40rpx 0px;
+  justify-content: space-between;
+  background: #fff;
+  margin-top: 0px;
+}
+.cu-list.menu-avatar>.cu-item .flex .text-cut {
+  max-width: 680rpx;
+}
+
+.text-sm {
+  font-size: 30rpx;
+}
+.text-xs {
+  font-size: 30rpx;
+}
+
+.text-grey, .line-grey, .lines-grey {
+  color: var(--grey);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cu-list+.cu-list {
+  margin-top: 0rpx;
+}
+
+.cu-list.menu-avatar>.cu-item .content {
+  position: absolute;
+  left: 70rpx;
+  width: 85%;
+  line-height: 1.6em;
+}
+.cu-list.menu-avatar>.cu-item .flex .text-cut {
+  max-width: 680rpx;
+}

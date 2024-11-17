@@ -1,0 +1,20 @@
+<!--pages/my/myAgenda/myAgenda.wxml-->
+<view class="cu-list menu-avatar">
+  <block wx:for="{{myBooking}}" wx:key="{{index}}">
+    <view class="cu-item solid-bottom">
+    <!-- 头像 -->
+      <view class="cu-avatar round lg" style="background-image:url({{item.resident_faceImg}});"  bindtap="toChat" data-index="{{index}}"></view>
+      <view class="content" bindtap="toChat" data-index="{{index}}">
+      <!-- 昵称 -->
+        <view class="text-black">
+          <text class="text-cut" style="font-size: 36rpx;">{{item.resident_nickName}}</text>
+        </view>
+      </view>
+      <!-- 时间 -->
+      <view class="action" style="width: 50%;" bindtap="toChat" data-index="{{index}}">
+        <view class="text-black text-xs" style="font-size: 29rpx;">{{item.date}}</view>
+        <view class="sm">{{item.time}}</view>
+      </view>
+    </view>
+  </block>
+</view>

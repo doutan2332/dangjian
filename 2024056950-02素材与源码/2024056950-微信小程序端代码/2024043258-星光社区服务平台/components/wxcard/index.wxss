@@ -1,0 +1,66 @@
+/* components/wxcard/index.wxss */
+@import '/lib/iconfont/iconfont.wxss';
+.single {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 40rpx 30rpx;
+  border-bottom: 1rpx solid rgba(87,107,149,0.1);
+}
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+  background-color: blue;
+}
+.main {
+  flex-grow: 1;
+  width: calc(100% - 180rpx);
+}
+.nickname {
+  font-size: 13pt;
+  font-weight: bold;
+  color: #576b95;
+  line-height: 1.5rem;
+}
+.main-content {
+  font-size: 13pt;
+  line-height: 20pt;
+  overflow: hidden;
+}
+
+.timeArea {
+  font-size: 8pt;
+  line-height: 20pt;
+  color: #888;
+  position: relative;
+}
+.timeArea-right {
+  float: right;
+}
+.zan-pinglun {
+  position: absolute;
+  bottom: -31px;
+  right: 60rpx;
+  display: block;
+  background-color: #4C5154;
+  height: 20pt;
+  border-radius: 10rpx;
+  font-size: 13pt;
+  color: white;
+  line-height: 15pt;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.zan-pinglun > .iconfont {
+  display: inline-block;
+  width: 150rpx;
+}
+.zan-pinglun > .icon-xin {
+  border-right: 1rpx solid #353535;
+}
+
+.timeArea .icon-pinglun1 {
+  font-size: 16pt;
+  color: #576b95;
+}

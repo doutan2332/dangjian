@@ -1,0 +1,19 @@
+<!--pages/my/myBooking/myBooking.wxml-->
+<view class="cu-list menu-avatar fixed">
+  <view class="cu-item solid-bottom" wx:for="{{communistList}}">
+    <view class="cu-avatar round lg" style="background-image:url({{item.community_faceImg}});" bindtap="toChat" data-index="{{index}}"></view>
+    <view class="content" bindtap="toChat" data-index="{{index}}">
+      <view class="text-blue">{{item.community_name}}</view>
+      <view class="text-black text-sm flex">
+        <text>
+          <text></text> 职业：{{item.community_occupation}}
+        </text>
+      </view>
+    </view>
+    <!-- 时间 -->
+    <view class="action" style="width: 40%;" bindtap="toChat" data-index="{{index}}">
+        <view class="text-black text-xs" style="font-size: xx-small;">{{item.date}}</view>
+        <view class="sm">{{item.time}}</view>
+      </view>
+  </view>
+</view>

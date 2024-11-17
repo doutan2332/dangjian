@@ -1,0 +1,59 @@
+/* pages/post/post.wxss */
+@import '../../lib/iconfont/iconfont.wxss';
+
+.edit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
+    height: 30pt;
+    font-size: 11pt;
+}
+.header-delive {
+    color: #09BB07;
+}
+
+.edit-main {
+    padding: 0rpx 55rpx;
+    padding-bottom: 13px;
+}
+.edit-text {
+    /* min-height: 100rpx; */
+    height: 180rpx;
+    overflow-y: scroll;
+    font-size: 10pt;
+    line-height: 20pt;
+    color: #353535
+}
+.edit-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+.edit-img  image {
+    width: 200rpx;
+    height: 200rpx;
+    margin: 0 10rpx 10rpx 0;
+}
+.icon-plus {
+    width: 200rpx;
+    height: 200rpx;
+    background-color: rgba(87,107,149,0.1);
+    font-size: 40pt;
+    color: #888;
+    line-height: 200rpx;
+    text-align: center;
+}
+
+.edit-footer {
+  padding: 60rpx 60rpx;
+}
+
+.ad{
+  background-color: var(--white);
+    padding: 1rpx 30rpx;
+    display: flex;
+    align-items: center;
+    min-height: 100rpx;
+}

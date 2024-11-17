@@ -1,0 +1,10 @@
+<!--pages/partyAvaluate/detail/detail.wxml-->
+<view style="background-color:white;">
+  <view class='edit-header'>
+    <text bindtap='saveEditOrNot'>取消</text>
+    <text class="header-delive" bindtap='post'>发表</text>
+  </view>
+  <view class='edit-main'>
+    <textarea class='edit-text' placeholder='请输入党员评价...' placeholder-style='color:#888' bindinput="getInputValue" value="{{content}}"></textarea>
+  </view>
+</view>

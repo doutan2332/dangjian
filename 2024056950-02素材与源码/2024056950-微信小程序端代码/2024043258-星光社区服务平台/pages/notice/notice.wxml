@@ -1,0 +1,8 @@
+<!--pages/notice/notice.wxml-->
+<view class="cu-bar bg-white solid-bottom" style="height: 48px;" wx:for="{{announcementList}}">
+  <view class="text-black text-sm flex" style="width: 94%;" bindtap="goNoticeDetail" data-id="{{item.id}}">
+    <image src="../../icons/announcement.png" style="width: 59px; height: 30px; margin-right: 7px; margin-left: 5px;"></image>
+    <text class="text-cut" style="width: 400px;height: 30px; line-height: 30px;font-size: 11px;">{{item.content}}
+    </text>
+  </view>
+</view>
